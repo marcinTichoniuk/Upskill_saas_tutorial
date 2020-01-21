@@ -28,6 +28,10 @@ gem 'jbuilder', '2.5.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Other
+gem 'bootstrap', '~> 4.3.1'
+gem 'hamlit', '~> 2.8.5'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '1.3.13'
@@ -54,5 +58,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 ruby '2.5.0'
 
-#other
-gem 'hamlit', '~> 2.8.5'
