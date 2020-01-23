@@ -32,6 +32,10 @@
       color: darken(white, 25%);
     }
   }
+  &-brand {
+    font-family: 'roboto', sans-serif;
+    font-weight: 700;
+  }
 }
 
 .home-callout {
