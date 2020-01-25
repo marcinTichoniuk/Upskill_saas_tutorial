@@ -1,10 +1,17 @@
 .container.my-4
   %h3.text-center Contact us
-  = form_for "/contacts" do |f|
-    = f.label :name
-    = f.text_field :name
-    = f.label :email
-    = f.text_field :email
-    = f.label :comments
-    = f.text_area :comments
-    = f.submit 'Submit'
+  .row
+    .col-md-9.col-lg-6.mx-auto
+      .card.card-body
+        = form_for "/contacts" do |f|
+          .form-group
+            = f.label :name
+            = f.text_field :name, class: 'form-control'
+          .form-group
+            = f.label :email
+            = f.text_field :email, class: 'form-control'
+          .form-group
+            = f.label :comments
+            = f.text_area :comments, class: 'form-control'
+          .form-group.text-right
+            = f.submit 'Submit', class: 'btn btn-primary'
