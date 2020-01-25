@@ -2,8 +2,9 @@
   %h3.text-center Contact us
   .row
     .col-md-9.col-lg-6.mx-auto
+      = flash[:notice]
       .card.card-body
-        = form_for "/contacts" do |f|
+        = form_for @contact do |f|
           .form-group
             = f.label :name
             = f.text_field :name, class: 'form-control'
