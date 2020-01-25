@@ -1,1 +1,10 @@
-%h1 Contact form
+.container.my-4
+  %h3.text-center Contact us
+  = form_for "/contacts" do |f|
+    = f.label :name
+    = f.text_field :name
+    = f.label :email
+    = f.text_field :email
+    = f.label :comments
+    = f.text_area :comments
+    = f.submit 'Submit'
