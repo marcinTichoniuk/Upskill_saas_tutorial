@@ -12,10 +12,12 @@ class ContactsController < ApplicationController
     # new object assign to variable (invoke contact_params method which is down below)
     # {name: 'what_someone_input_here', email: 'what_someone_input_here', comments: 'what_someone_input_here' }
     if @contact.save
-      flash[:success] = "Message sent"
+      flash[:success] = "Message sent ddd"
+      # assign to object flash key success (if flash doesn't have one it creates new key) value "Message sent ddd"
       redirect_to new_contact_path
     else
-      flash[:error] = @contact.errors.full_messages.join(", ")
+      flash[:danger] = @contact.errors.full_messages.join(", ")
+      # flash -> {key: value, error: "Name can't be blank"}
       redirect_to new_contact_path
     end
   end
