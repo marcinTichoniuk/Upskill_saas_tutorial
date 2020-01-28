@@ -12,9 +12,11 @@ class ContactsController < ApplicationController
     # new object assign to variable (invoke contact_params method which is down below)
     # {name: 'what_someone_input_here', email: 'what_someone_input_here', comments: 'what_someone_input_here' }
     if @contact.save
-      redirect_to new_contact_path, notice: "Message sent"
+      flash[:success] = "Message sent"
+      redirect_to new_contact_path
     else
-      redirect_to new_contact_path, notice: "Error occured"
+      flash[:error] = @contact.errors.full_messages.join(", ")
+      redirect_to new_contact_path
     end
   end
 
