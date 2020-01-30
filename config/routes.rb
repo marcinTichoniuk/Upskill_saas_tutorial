@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   # get 'contacts/new', to: 'contacts#new'
   resources :contacts 
+  get 'contact-us', to: 'contacts#new'
+
 end
