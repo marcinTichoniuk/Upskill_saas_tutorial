@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   
   get :about,  to: 'pages#about'
 
-  # get 'contacts/new', to: 'contacts#new'
-  resources :contacts 
-  get 'contact-us', to: 'contacts#new'
+  resources :contacts, only: [:create]
+
+  get 'contact-us', to: 'contacts#new', as: 'new_contact'
 
 end
