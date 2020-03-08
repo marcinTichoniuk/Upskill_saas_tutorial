@@ -7,6 +7,7 @@ class ContactsController < ApplicationController
   end
 
   # by default saving object to db
+  # when someone click 'Submit' button invoke function create
   def create
     @contact = Contact.new(contact_params)
     # new object assign to variable (invoke contact_params method which is down below)
