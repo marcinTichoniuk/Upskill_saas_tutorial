@@ -12,7 +12,13 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     # new object assign to variable (invoke contact_params method which is down below)
     # {name: 'what_someone_input_here', email: 'what_someone_input_here', comments: 'what_someone_input_here' }
+    # save to database
     if @contact.save
+      name = params[:contact][:name]
+      email = params[:contact][:email]
+      body = params[:contact][:comments]
+      # from app/mailers/contact_mailer.rb -> def contact_email()
+      ContactMailer.contact_email(name, email, body).deliver
       flash[:success] = "Message sent ddd"
       # assign to object flash key success (if flash doesn't have one it creates new key) value "Message sent ddd"
       redirect_to new_contact_path
