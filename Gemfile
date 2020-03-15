@@ -33,6 +33,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'hamlit', '~> 2.8.5'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'hirb', '0.7.3'
+gem 'devise', '4.7.0'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
