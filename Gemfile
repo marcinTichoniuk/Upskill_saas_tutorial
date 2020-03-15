@@ -32,7 +32,10 @@ gem 'jbuilder', '2.5.0'
 gem 'bootstrap', '~> 4.3.1'
 gem 'hamlit', '~> 2.8.5'
 gem 'font-awesome-sass', '~> 5.12.0'
+# hirb better database table display in console
 gem 'hirb', '0.7.3'
+# Devise for user authentication
+gem 'devise', '4.2.0'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
