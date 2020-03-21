@@ -14,31 +14,42 @@
  *= require_self
  */
 
-@import 'bootstrap';
+@import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-.navbar, .home-callout {
-  background: #1e3c72;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.navbar,
+.home-callout {
+  background: #1e3c72; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2a5298,
+    #1e3c72
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2a5298,
+    #1e3c72
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
 }
 
 .navbar {
-  &-brand, .nav-link {
+  &-brand,
+  .nav-link {
     color: white;
     &:hover {
       color: darken(white, 25%);
     }
   }
   &-brand {
-    font-family: 'roboto', sans-serif;
+    font-family: "roboto", sans-serif;
     font-weight: 700;
   }
   &-toggler {
     border: 2px solid #fff;
-    &:hover, &:active {
+    &:hover,
+    &:active {
       background-color: darken(#20417b, 10%);
     }
   }
@@ -48,6 +59,12 @@
   padding: 50px 0 100px;
 }
 
- h1, h2, h3 {
-  font-family: 'Roboto', sans-serif;
- }
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+.alert-notice {
+  display: none;
+}
