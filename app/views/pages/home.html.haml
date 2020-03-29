@@ -1,3 +1,15 @@
 .home-callout.text-center.container-fluid
   %h1 Welcome to DevMatch
   %h3 A membership site where everyone can learn ror
+.container.mt-4
+  .row
+    .col-md-6
+      %h2.text-center Basic membership
+      %h4 Sign up for free and get basic access to the community.
+      %br
+      = link_to "Sign up with Basic", "/", class: "btn btn-info btn-block"
+    .col-md-6
+      %h2.text-center Pro link
+      %h4 Sign up for the pro account for $10/month and get access to the community and contact information.
+      %br
+      = link_to "Sign up with Pro", "/", class: "btn btn-success btn-block"
